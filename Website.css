@@ -74,25 +74,142 @@ body {
 /* C O N T A C T */
 /* ************** */
 
-form{
-  border-radius: 25px;
-  background-color: lightblue;
-  padding: 10px;
-  height: 60%;
-
-}
-input[type=text], select,textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1px solid gray;
+*, *:before, *:after {
   box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  max-height: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-fa{
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  /* background: linear-gradient(to blue, red 0%, light 100%); */
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: lightblue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: white;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 4px;
+  background: blue;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 50px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+  cursor: context-menu;
+}
+
+.app-form-control::placeholder {
+  color: grey;
+}
+
+.app-form-control:focus {
+  border-bottom-color: lightblue;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  border-style: double;
+  color: white;
+  font-size: 16px;
+  cursor: context-menu;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: black;
+}
+
+
+
+
+
+
+.fa{
   padding: 9px;
   font-size: 20px;
   width: 30px;
@@ -101,41 +218,88 @@ fa{
   margin: 5px 2px;
   border-radius: 15%;
 }
-fa:hover {
+.fa:hover {
   opacity: 0.7;
 }
-fa-facebook {
+.fa-facebook {
   background: #3B5998;
   color: white;
 }
-fa-twitter {
+.fa-twitter {
   background: #55ACEE;
   color: white;
 }
-fa-linkedin{
+.fa-linkedin{
   background: #0072b1;
   color: white;
 }
-fa fa-instagram {
+.fa-instagram {
   background: #3f729b;
   color: white;
 }
-fa fa-github{
-background: white;
-color: black;
+.fa-github{
+  background: white;
+  color: black;
 }
 
 
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 20%;
-    background-color:black;
-    color: white;
-    text-align: center;
+
+.footer-container {
+  flex: 0 1 700px;
+  margin: inherit;
+  padding: 5px;
+  background-color: lightblue;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 10px;
+
 }
-h5{
-  text-align: center;
+.footer h5{
+  text-transform: uppercase;
+}
+
+@media (max-width:900px) {
+  .footer-container{
+    width:100%;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+
+
+/* ****************** */
+/*      A B O U T     */
+/* ****************** */
+p{
+  color: white;
+  text-shadow: black;
 }
