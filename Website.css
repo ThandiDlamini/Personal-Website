@@ -36,15 +36,19 @@ nav .animation {
   transition: all .5s ease 0s;
   border-radius: 8px;
 }
-a:nth-child(1) {
+.menu a:nth-child(1) {
   width: 100px;
 }
-a:nth-child(2) {
+.menu a:nth-child(2) {
   width: 110px;
 }
-a:nth-child(3) {
-  width: 100px;
+.menu a:nth-child(3) {
+ width: 100px;
 }
+.menu a:nth-child(4) {
+ width: 100px;
+}
+
 nav .start-home, a:nth-child(1):hover~.animation {
   width: 100px;
   left: 0;
@@ -100,9 +104,12 @@ body, button, input {
 
 .screen {
   /* background: linear-gradient(to blue, red 0%, light 100%); */
-  position: relative;
+
   background: #3e3e3e;
   border-radius: 15px;
+  position: relative;
+
+
 }
 
 .screen:after {
@@ -130,6 +137,7 @@ body, button, input {
 
 .screen-body {
   display: flex;
+
 }
 
 .screen-body-item {
@@ -190,20 +198,6 @@ body, button, input {
   border-bottom-color: lightblue;
 }
 
-.app-form-button {
-  background: none;
-  border: none;
-  border-style: double;
-  color: white;
-  font-size: 16px;
-  cursor: context-menu;
-  outline: none;
-}
-
-.app-form-button:hover {
-  color: black;
-}
-
 
 
 
@@ -216,7 +210,7 @@ body, button, input {
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
-  border-radius: 15%;
+  border-radius: 10%;
 }
 .fa:hover {
   opacity: 0.7;
@@ -224,6 +218,7 @@ body, button, input {
 .fa-facebook {
   background: #3B5998;
   color: white;
+
 }
 .fa-twitter {
   background: #55ACEE;
@@ -245,18 +240,35 @@ body, button, input {
 
 
 .footer-container {
-  flex: 0 1 700px;
+  /* flex: 0 1 700px;
   margin: inherit;
   padding: 5px;
   background-color: lightblue;
   box-sizing: border-box;
   position: relative;
   margin-bottom: 10px;
+  border-collapse: collapse; */
+   left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+     border-style: groove;
 
 }
 .footer h5{
   text-transform: uppercase;
+  color: black;
+  text-decoration: overline;
 }
+.footer p{
+  color: black;
+  font-size: 10px;
+  font-style: italic;
+}
+
 
 @media (max-width:900px) {
   .footer-container{
@@ -301,5 +313,94 @@ body, button, input {
 /* ****************** */
 p{
   color: white;
-  text-shadow: black;
+}
+
+/* .ref {
+  height: 60%;
+  width: 50%;
+  position: fixed;
+  position: absolute;
+  z-index: 1;
+  top: auto;
+  overflow-x: hidden;
+  padding-top: 20px;
+  font-size: medium;
+}
+.left {
+  left: 0;
+  text-align: center;
+  animation: lside 5s infinite;
+}
+@keyframes lside{
+  0%{
+    background-color: rgb(14, 116, 119);
+  }
+  100%{
+    background-color: #5a4ca7;
+  }
+}
+.right {
+  right: 0;
+  text-align: center;
+  animation: rside 5s infinite;
+}
+@keyframes rside{
+  0%{
+    background-color: whitesmoke;
+  }
+  100%{
+    background-color: #5a4ca7;
+  }
+}
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-60%, -60%);
+  text-align: center;
+} */
+
+
+
+
+
+/* ****************** */
+/*   G A L L E R Y    */
+/* ****************** */
+
+
+.gallery {
+   width: 640px;
+   /* margin: 0 auto; */
+   /* padding: 5px; */
+   background: lightblue;
+   box-sizing: border-box;
+   vertical-align:middle;
+   position: relative;
+   float: left;
+   padding: 5px;
+}
+.box-img{
+  width: 100px;
+  transition: .1s transform;
+  transform: translateZ(0);
+
+}
+.box-img :hover {
+  z-index: 1;
+}
+
+.box-img:hover {
+  transform: scale(1.8,1.8);
+  transition: .3s transform;
+}
+
+.box-img:before, .box-img:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.box-img:after {
+  clear: both;
 }
