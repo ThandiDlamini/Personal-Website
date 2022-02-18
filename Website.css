@@ -100,12 +100,15 @@ body, button, input {
   display: flex;
   min-height: 100vh;
 
+
 }
+
 
 .container {
   flex: 0 1 700px;
   margin: auto;
   padding: 10px;
+
 
 }
 
@@ -311,6 +314,22 @@ body, button, input {
 p{
   color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
