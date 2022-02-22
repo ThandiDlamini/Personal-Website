@@ -75,6 +75,40 @@ body {
   background: #2c3e50;
 }
 
+.land p {
+  font-weight: 900;
+  text-align: center;
+  font-size: 50px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, white, grey, lightblue);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  margin: auto;
+  width: 60%;
+  border: 5px solid lightblue;
+  padding: 10px;
+  position: center;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+
+
+
+
 
 
 
@@ -368,4 +402,22 @@ p{
 }
 .box-img:after {
   clear: both;
+}
+
+
+
+@media (max-width:900px) {
+  .menu, .app-form, .gallery, .box p{
+    width:100%;
+}
+.menu {
+    font-size: 1.5rem;
+  }
+.app-form {
+  position: fixed;
+  height: 25%;
+}
+.gallery{
+  text-align: center;
+}
 }
